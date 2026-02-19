@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>கலைஞர் கவிதைகள் - கலைஞர் கருணாநிதியின் கவிதைத் தொகுப்பு</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header>
+        <h1>கலைஞர் கவிதைகள்</h1>
+        <p>கலைஞர் கருணாநிதியின் கவிதைத் தொகுப்பு</p>
+    </header>
+
+    <main>
+        <!-- ========== SEARCH ========== -->
+        <section class="search-section">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="கவிதையைத் தேடுங்கள்..." aria-label="கவிதை தேடல்">
+            </div>
+        </section>
+
+        <!-- ========== CATEGORY FILTER ========== -->
+        <section class="filter-section">
+            <p class="filter-label">பிரிவு:</p>
+            <div class="chips" id="categoryChips">
+                <button class="chip active" data-category="all">அனைத்தும்</button>
+                <button class="chip" data-category="அன்பு">அன்பு</button>
+                <button class="chip" data-category="தமிழ்">தமிழ்</button>
+                <button class="chip" data-category="சமூகநீதி">சமூகநீதி</button>
+                <button class="chip" data-category="உழைப்பு">உழைப்பு</button>
+                <button class="chip" data-category="மனிதநேயம்">மனிதநேயம்</button>
+                <button class="chip" data-category="அரசியல்">அரசியல்</button>
+            </div>
+        </section>
+
+        <!-- ========== KAVIDHAI LIST ========== -->
+        <section class="kavidhai-list" id="kavidhaiList">
+            <!-- Cards rendered by JavaScript -->
+        </section>
+
+        <!-- Empty state (hidden by default) -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-state-icon">📜</div>
+            <p>கவிதைகள் காணப்படவில்லை</p>
+        </div>
+    </main>
+
+    <!-- ========== MODAL ========== -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <button class="modal-close" id="modalClose" aria-label="மூடு">×</button>
+            </div>
+            <div class="modal-body">
+                <pre class="modal-text" id="modalText"></pre>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn btn-copy" id="copyBtn">நகலெடு</button>
+                <button class="modal-btn btn-share" id="shareBtn">பகிர்</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TOAST ========== -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        Appa-க்கு அர்ப்பணிப்பு ❤️ - உருவாக்கியது: Nizam
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
